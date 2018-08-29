@@ -1,0 +1,60 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="/" class="m-brand__logo-wrapper">
+        <%= image_tag("larion.png", height: "30") %>
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Training</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Health Care</a>
+            <a class="dropdown-item" href="#">Ecommerce</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Mobil Application</a>
+          </div>
+        </li>
+  <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div id="carouselNatural" class="carousel slide" data-ride="carousel" >
+    <div class="carousel-inner">
+      <div class="carousel-item active"  style="padding: 60px;">
+        <%= image_tag("na1.jpg", class: "d-block w-100", alt: "First slide", height: "600") %>
+      </div>
+      <div class="carousel-item" style="padding: 20px;">
+        <%= image_tag("na2.jpg", class: "d-block w-100", alt: "Second slide", height: "600") %>
+      </div>
+      <div class="carousel-item" style="padding: 20px;">
+        <%= image_tag("na3.jpg", class: "d-block w-100", alt: "Third slide", height: "600") %>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselNatural" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselNatural" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</header>

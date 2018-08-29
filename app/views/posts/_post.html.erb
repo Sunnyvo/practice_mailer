@@ -1,0 +1,19 @@
+<article id="">
+  <header>
+    <div class="meta">
+      Written by <span class="author"><%= post.user.name%></span> <span class="date">29/12/2018</span> | <span class="comments"><span class="badge">4</span> Comments</span>
+    </div>
+    <h2>
+      <a href="">
+      <%= post.user.name %></a></h2>
+  </header>
+  <div class="entry-content">
+    <a href="">
+      <%= image_tag("sunny.png", class: "img-fluid", alt: "#{post.title}", size: "750x420")%>
+    </a>
+    <p><%= post.body %></p>
+    <a href="#" class="btn btn-primary">Read More <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+  </div>
+  <footer>
+  </footer>
+</article>

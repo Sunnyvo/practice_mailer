@@ -1,0 +1,56 @@
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Blog <small>for fun</small></h1>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <% @posts.each do |post| %>
+        <%= render partial: "posts/post", locals: { post: post } %>
+      <% end %>
+      <div style="margin-top:20px" >
+        <%= will_paginate @posts %>
+      </div>
+    </div>
+    <aside class="col-md-4">
+
+      <div class="card mb-3">
+        <h3 class="card-header mb-3">Join Larion</h3>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-primary">Join Us</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+      <h3>Recent Posts</h3>
+      <div class="list-group  mb-3">
+        <a href="#" class="list-group-item active">
+          <h4 class="list-group-item-heading">Top View</h4>
+          <p class="list-group-item-text">
+            Hello View &hellip;
+          </p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">Top Like</h4>
+          <p class="list-group-item-text">
+            Hello Like &hellip;
+          </p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">Top Comment</h4>
+          <p class="list-group-item-text">
+            Hello Sunny &hellip;
+          </p>
+        </a>
+      </div>
