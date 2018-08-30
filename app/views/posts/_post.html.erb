@@ -1,19 +1,31 @@
-<article id="">
+<article class="post" id="<%= dom_id post %>">
   <header>
-    <div class="meta">
-      Written by <span class="author"><%= post.user.name%></span> <span class="date">29/12/2018</span> | <span class="comments"><span class="badge">4</span> Comments</span>
-    </div>
     <h2>
       <a href="">
       <%= post.user.name %></a></h2>
+    <div class="meta">
+      Written by <span class="author"><%= post.user.name%></span> <span class="date"><%= time_ago_in_words post.updated_at %></span>
+    </div>
   </header>
   <div class="entry-content">
     <a href="">
       <%= image_tag("sunny.png", class: "img-fluid", alt: "#{post.title}", size: "750x420")%>
     </a>
     <p><%= post.body %></p>
-    <a href="#" class="btn btn-primary">Read More <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    <a href="#" class="btn btn-primary read-more">Read More <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
   </div>
   <footer>
+    <div class="meta">
+      <%= link_to icon("heart-o"," #{post.likes.count} "), toggle_like_path(post_id: post.id), class: "js-like-button #{'is-liked' if current_user.liking?(post)}", method: "post", remote: true %>|
+      <span class="comments"><span class="badge"><%= post.comments.count%></span> Comments</span>
+    </div>
+    <div class= "list-comments">
+      <% post.comments.each do |cmt|  %>
+        <%= render partial: "comments/comment", locals: {cmt: cmt} %>
+      <% end %>
+    </div>
+    <div class="panel">
+      <%= render partial: "comments/new_comment", locals: {post: post} %>
+    </div>
   </footer>
 </article>

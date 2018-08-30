@@ -1,5 +1,27 @@
 
 
+<div id="carouselNatural" class="carousel slide" data-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active"  style="padding: 60px;">
+      <%= image_tag("na1.jpg", class: "d-block w-100", alt: "First slide", height: "600") %>
+    </div>
+    <div class="carousel-item" style="padding: 20px;">
+      <%= image_tag("na2.jpg", class: "d-block w-100", alt: "Second slide", height: "600") %>
+    </div>
+    <div class="carousel-item" style="padding: 20px;">
+      <%= image_tag("na3.jpg", class: "d-block w-100", alt: "Third slide", height: "600") %>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselNatural" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselNatural" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
 <div class="container">
   <div class="page-header">
     <h1>Blog <small>for fun</small></h1>
@@ -14,7 +36,6 @@
       </div>
     </div>
     <aside class="col-md-4">
-
       <div class="card mb-3">
         <h3 class="card-header mb-3">Join Larion</h3>
         <form class="form-horizontal">
@@ -30,9 +51,7 @@
             </div>
           </div>
         </form>
-
       </div>
-
       <h3>Recent Posts</h3>
       <div class="list-group  mb-3">
         <a href="#" class="list-group-item active">
@@ -54,3 +73,6 @@
           </p>
         </a>
       </div>
+    </aside>
+  </div>
+</div>

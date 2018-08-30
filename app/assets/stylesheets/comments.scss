@@ -1,3 +1,61 @@
-// Place all the styles related to the comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.panel-shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+
+.panel-white {
+  border: 1px solid #dddddd;
+}
+
+.panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.cmt {
+  margin-top: 10px;
+  width: 95%;
+  border-radius: 25px;
+}
+
+.cmt .cmt-heading {
+  height: 95px;
+  padding: 20px 15px;
+}
+
+.cmt .cmt-heading .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+
+.cmt .cmt-image .image {
+  width: 100%;
+  height: auto;
+}
+
+.cmt .cmt-heading .image .img-circle {
+  border-radius: 50%;
+}
+
+.cmt .cmt-heading .meta {
+  min-height: 46px;
+  width: 80%;
+}
+
+.new-comment {
+  border-color: #9C9796;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 25px;
+  min-height: 100px;
+  width: 100%;
+  // box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}

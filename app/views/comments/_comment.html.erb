@@ -1,0 +1,22 @@
+<div class="col-sm-12" id="<%=dom_id cmt%>">
+  <div class="panel panel-white cmt panel-shadow">
+    <div class="cmt-heading">
+      <div class="pull-left image">
+        <img src="<%= cmt.user.image_url%>" class="img-circle avatar" alt="user profile image">
+      </div>
+      <div class="pull-left meta">
+        <div class="cmt-body">
+          <a href="#"><b><%= cmt.user.name %></b></a>
+          <span class="card-text">
+            <%= cmt.body %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="meta">
+        <%= link_to icon("heart-o"," #{cmt.likes.count} "), toggle_like_path(comment_id: cmt.id), class: "js-like-button #{'is-liked' if current_user.liking?(cmt)}", method: "post", remote: true %>
+      </div>
+    </footer>
+  </div>
+</div>

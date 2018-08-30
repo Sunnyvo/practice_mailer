@@ -1,0 +1,3 @@
+
+$("#<%= dom_id @current_post %> .list-comments").append('<%= escape_javascript(render "comment", cmt: @comment) %>');
+$("#<%= dom_id @current_post %> .new-comment").val("");

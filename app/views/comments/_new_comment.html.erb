@@ -1,0 +1,6 @@
+ <%= form_for @comment, remote: true, html: {autocomplete: "off"} do |f| %>
+  <p>
+    <%= f.hidden_field :post_id, value: post.id  %>
+    <%= f.text_field :body, :placeholder => "Show me what you've got!", class: "new-comment" %>
+  </p>
+<% end %>

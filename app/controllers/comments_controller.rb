@@ -7,11 +7,10 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build comment_params
 
     if @comment.save
+      @current_post = @comment.post
     else
-      flash[:error] = "Error: #{@comment.errors.full_messages.to_sentence}"
+      # xu ly error
     end
-
-    @item = @comment.post
 
     respond_to do |f|
       f.html{ redirect_back(fallback_location: root_path) }
